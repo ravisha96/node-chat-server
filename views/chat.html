@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Node-Socket</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="stylesheets/styles.css" rel="stylesheet">
+    </head>
+<body>
+<!-- Header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">App Name</a>
+    </div>
+  </div><!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+    <div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-9">
+
+            <div class="row">
+
+                <!-- center left-->
+                <div class="col-md-6 chat-window">
+
+                  <hr>
+
+                  <div class="well">
+                      <div class="panel-heading"><h4>UserName</h4></div>
+                      <div class="activity-window well" id="showMessages">
+
+                      </div><!--/activity-window-body-->
+                      <div class="well">
+                        <div class="col-sm-6>">
+                          <form id="inputMessageForm">
+                            <input type="text" class="inputMessageBox" class="form-control"/>
+                            <input type="submit" class="submit">
+                          </form>
+                        </div>
+                        <!-- <span class="badge pull-right">
+                          <a href="#">send</a>
+                        </span> -->
+                      </div>
+                  </div><!--/panel-->
+
+                  <hr>
+
+
+            </div><!--/row-->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="libs/lodash/lodash.min.js"></script>
+    <script src="libs/socket.io-client/socket.io.js"></script>
+    <script src="javascripts/scripts.js"></script>
+
+    <script>
+
+        new SocketClient ({
+          showMessageBox: '#showMessages',
+          inputMessageForm: '#inputMessageForm',
+        });
+    </script>
+    </body>
+</html>
